@@ -1,0 +1,33 @@
+{% extends 'app/base.html' %}
+
+
+{% block contenido %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="card">
+    <div class="card body">
+        <h2>Listado de Usuarios</h2>
+        <br>
+        <table class="table table-striped table-hover table-responsive-small">
+            <tr>
+                <th>Nombre Usuario</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+            </tr>
+
+            {% for l in listado_usuario %}
+            <tr>
+                <td>{{ l.1 }}</td>
+                <td>{{ l.2 }}</td>
+                <td>{{ l.3 }}</td>
+                <td>{{ l.4 }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
